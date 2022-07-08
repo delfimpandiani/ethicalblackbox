@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#"
+     xml:base="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:eFlint_ontology="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology">
+        <owl:versionIRI rdf:resource="urn:absolute:0.1"/>
+        <rdfs:comment>Ontoloy for the representation of key legal concepts used in the eFlint declarative language. By Lu-chi Liu, Delfina S. Martinez Pandiani, Sindhu Vasireddy, Laura Waltersdorfer (and Daniel Henselmann).</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#accurateForPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#accurateForPurpose">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#fulfillableByAccurateData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#atPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#atPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#createsConsent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#createsConsent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#dataAccessibleByController -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#dataAccessibleByController">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenAccessToData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#fulfillableByAccurateData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#fulfillableByAccurateData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#givesConsent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#givesConsent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasConsent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasConsent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isConsentOfData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasPersonalDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasPersonalDataType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isPersonalDataTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasRecipient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasRecipient">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isConsentOfData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isConsentOfData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isDataOfSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isDataOfSubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#subjectOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenAccessToData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenAccessToData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Controller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenConsentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenConsentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isGivenTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Controller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isOfPurposeType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isOfPurposeType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Purpose"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PurposeType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isPersonalDataTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#isPersonalDataTypeOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#relatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#subjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#subjectOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#hasID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ConsentGivingSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ConsentGivingSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Controller"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#NervousSystemType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#NervousSystemType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataCollectionSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataCollectionSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Processor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Processor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Purpose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Purpose"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PurposeType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PurposeType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#RectificationDemandSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#RectificationDemandSituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ReproductiveSystemType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ReproductiveSystemType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#PersonalDataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintDescription">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#eFlintSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Subject"/>
+        <givesConsent rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-1234"/>
+        <subjectOf rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice-reproductive-system-data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice-reproductive-system-data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice-reproductive-system-data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Data"/>
+        <accurateForPurpose rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#purpose-1234"/>
+        <dataAccessibleByController rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#health-app"/>
+        <hasPersonalDataType rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#reproductive-system"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-1234 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Consent"/>
+        <isConsentOfData rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice-reproductive-system-data"/>
+        <isGivenTo rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#health-app"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-giving-1234 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-giving-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ConsentGivingSituation"/>
+        <createsConsent rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#consent-1234"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice"/>
+        <hasRecipient rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#health-app"/>
+        <relatedTo rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#alice-reproductive-system-data"/>
+        <relatedTo rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#purpose-1234"/>
+        <hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234</hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#health-app -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#health-app">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Controller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#purpose-1234 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#purpose-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#reproductive-system -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#reproductive-system">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delfi/ontologies/2022/6/eFlint_ontology#ReproductiveSystemType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
